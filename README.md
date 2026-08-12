@@ -25,6 +25,8 @@ Project Shield v2.0.0 runs locally and includes security grading, fix guidance, 
 
 Project Shield Pro is **$29/month** and is delivered through an automated Polar license-key benefit.
 
+The Polar checkout displays **Clouvel**, the publisher account for Project Shield. Taxes, when applicable, are calculated by Polar from the buyer's billing address and shown before payment.
+
 - [See Project Shield](https://shield.codemeant.dev)
 - [Get Project Shield Pro for $29/month](https://buy.polar.sh/polar_cl_eiXDc9bwtIpz99P8tjt3K1NZgS8oJN9WCwYIO1pgBDt)
 - [View the npm package](https://www.npmjs.com/package/project-shield)
