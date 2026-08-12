@@ -1,5 +1,7 @@
 # Project Shield
 
+[한국어](README.ko.md)
+
 Security scanner for AI coders and MCP users. It checks projects and AI-agent configuration for exposed secrets, PII, insecure MCP settings, prompt injection, and risky Claude Code hooks.
 
 [![npm version](https://img.shields.io/npm/v/project-shield)](https://www.npmjs.com/package/project-shield)
