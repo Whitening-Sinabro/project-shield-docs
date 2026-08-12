@@ -1,94 +1,63 @@
 # Project Shield
 
-> Security scanner for MCP servers and AI-generated code.
+Security scanner for AI coders and MCP users. It checks projects and AI-agent configuration for exposed secrets, PII, insecure MCP settings, prompt injection, and risky Claude Code hooks.
 
-One command to security-grade your MCP server.
+[![npm version](https://img.shields.io/npm/v/project-shield)](https://www.npmjs.com/package/project-shield)
 
-## Installation
-
-```bash
-npm install -g project-shield
-```
-
-Or use directly with npx:
+## Run the free scan
 
 ```bash
-npx project-shield scan .
+npx project-shield scan ./my-project
 ```
 
-## MCP Server Configuration
+Project Shield v2.0.0 runs locally and includes security grading, fix guidance, and AI-agent environment auditing.
 
-Add to your MCP client config:
+## Free and Pro
 
-```json
-{
-  "mcpServers": {
-    "project-shield": {
-      "command": "npx",
-      "args": ["-y", "project-shield", "scan", "."]
-    }
-  }
-}
+| Feature | Free | Pro |
+|---|---:|---:|
+| Project scans | 5/month | 50/month |
+| Environment audits | 3/month | 20/month |
+| Fix-it guidance | Top 3 summaries | All guides with code and references |
+| Badge | Watermarked | Clean badge with UUID and verification URL |
+| Evidence Pack | Not included | JSON + PDF with integrity seal |
+| PII findings | Count only | File and line details |
+
+Project Shield Pro is **$29/month** and is delivered through an automated Polar license-key benefit.
+
+- [See Project Shield](https://shield.codemeant.dev)
+- [Get Project Shield Pro for $29/month](https://buy.polar.sh/polar_cl_eiXDc9bwtIpz99P8tjt3K1NZgS8oJN9WCwYIO1pgBDt)
+- [View the npm package](https://www.npmjs.com/package/project-shield)
+
+## Commands
+
+```bash
+# Scan a project
+npx project-shield scan ./my-project
+
+# Audit the local AI coding environment
+npx project-shield audit
+
+# Activate a Polar-issued Pro license
+project-shield activate PSH-XXXX-XXXX-XXXX-XXXX
+
+# Check license status
+project-shield status
 ```
 
-## Tools
+## What Pro unlocks
 
-### scan
-Security scan a directory or MCP server project. Returns A-F grade with detailed findings.
+- Full fix-it guides with code examples and references
+- JSON and PDF Evidence Packs
+- Clean badges with UUID and verification URL
+- Full Claude Code environment checks and hooks analysis
+- Higher monthly scan and audit limits
 
-**Parameters:**
-- `path` (string, required) - Directory to scan
-- `format` (string, optional) - Output format: `text`, `json`, `badge`
+## Security notes
 
-### grade
-Get the security grade for a project without full report.
-
-### evidence
-Generate a tamper-proof Evidence Pack with SHA-256 hashed scan results.
-
-## What it detects
-
-| Layer | What | How |
-|-------|------|-----|
-| **Secrets** | API keys, tokens, credentials | Regex + entropy + context analysis |
-| **PII** | Email, phone, SSN | Pattern matching + checksum validation |
-| **Prompt Injection** | Attacks in MCP tool descriptions | Heuristic + pattern detection |
-| **MCP Misconfig** | Missing auth, open permissions, no logging | Config rule engine |
-
-## Security Grades
-
-| Grade | Meaning |
-|-------|---------|
-| A | Excellent - ship with confidence |
-| B | Good - minor improvements suggested |
-| C | Clean - some issues to address |
-| D | Warning - fix before deploy |
-| E | Warning - significant issues found |
-| F | **Locked** - deployment blocked until fixed |
-
-## Features
-
-- **275+ detection rules** across 4 security layers
-- **A-F grading system** with automatic deploy lock on F
-- **Evidence Packs** - SHA-256 hashed, tamper-proof scan results
-- **Fix-it guides** - actionable remediation for every finding
-- **Badge system** - verifiable security badges for your projects
-- **MCP-native** - scans MCP protocol-level security, not just code
-
-## Pricing
-
-| Plan | Price | Scans | Features |
-|------|-------|-------|----------|
-| Free | $0 | 5/month | Basic reporting |
-| Pro | $29/month | 50/month | PDF reports, Evidence Packs |
-| Team | $99/month | Unlimited (5 users) | CI/CD integration |
-| Enterprise | $299+/month | Custom | SSO, audit trails |
-
-## Links
-
-- **Website**: [shield.codemeant.dev](https://shield.codemeant.dev)
-- **npm**: [project-shield](https://www.npmjs.com/package/project-shield)
-- **Product Hunt**: [Project Shield](https://www.producthunt.com/products/project-shield)
+- Run scans only on projects you own or are authorized to inspect.
+- Review findings before changing code or configuration.
+- Never paste secrets or customer data into public issues.
 
 ## License
 
